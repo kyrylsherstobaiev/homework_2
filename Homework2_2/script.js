@@ -1,5 +1,7 @@
 "use strict";
 
+//*calculate Factorial 
+
 function factorial(n) {
 	if (n === 0) {
 		return 1;
@@ -12,7 +14,7 @@ function factorial(n) {
 	}
 }
 
-function isNumber(n) {
+function checkNumber(n) {
 	while (isNaN(n) || n < 0) {
 		n = +prompt("Att: Enter value positive value include ZERO :", "");
 	}
@@ -20,9 +22,9 @@ function isNumber(n) {
 }
 
 let a = +prompt("Enter a:", "");
-a = isNumber(a);
+a = checkNumber(a);
 let b = +prompt("Enter b:", "");
-b = isNumber(b);
+b = checkNumber(b);
 
 console.log(`Value a: ${a}, Value b: ${b}`);
 
