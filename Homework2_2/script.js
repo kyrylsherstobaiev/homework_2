@@ -23,23 +23,24 @@ let a = +prompt("Enter \"a\":", "");
 a = checkNumber(a);
 let b = +prompt("Enter \"b\":", "");
 b = checkNumber(b);
+while (a >= b) {
+	b = +prompt("\"b\" must be more than \"a\" || (\"b\" > \"a\")   Enter value \"b\" one more:", "");
+}
 console.log(`Value \"a\": ${a}, Value \"b\": ${b}`);
 
-if (a < b) {
-	let h = +prompt("Enter Loop Step \"h\":", "");
+let h = +prompt("Enter Loop Step \"h\":", "");
 
-	while (isNaN(h) || h <= 0 || h > b) {
-		h = +prompt("Att: Enter positive \"value\" more than ZERO , bigger than \"a\" and smaller than \"b\":", "");
-	}
-	console.log(`Step \"h\": ${h}`);
-
-	let sum = 0;
-	for (let i = a; i <= b; i += h) {
-		console.log(`${i}!`, factorial(i));
-		sum += factorial(i);
-	}
-	console.log(`Total \"sum\": ${sum}`);
-} else {
-	console.log(`\"a\" >= \"b\" Wrong values : ${b} >= ${a}. You should enter \"a\" <= \"b\"`);
+while (isNaN(h) || h <= 0 || h > b) {
+	h = +prompt("Att: Enter positive \"value\" more than ZERO , bigger than \"a\" and smaller than \"b\":", "");
 }
+console.log(`Step \"h\": ${h}`);
+
+let sum = 0;
+for (let i = a; i <= b; i += h) {
+	console.log(`${i}!`, factorial(i));
+	sum += factorial(i);
+}
+console.log(`Total \"sum\": ${sum}`);
+
+
 
