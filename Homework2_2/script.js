@@ -1,7 +1,5 @@
 "use strict";
 
-//*calculate Factorial 
-
 function factorial(n) {
 	if (n === 0) {
 		return 1;
@@ -16,33 +14,32 @@ function factorial(n) {
 
 function checkNumber(n) {
 	while (isNaN(n) || n < 0) {
-		n = +prompt("Att: Enter value positive value include ZERO :", "");
+		n = +prompt("Att: Enter \"value\" positive value include ZERO :", "");
 	}
 	return n;
 }
 
-let a = +prompt("Enter a:", "");
+let a = +prompt("Enter \"a\":", "");
 a = checkNumber(a);
-let b = +prompt("Enter b:", "");
+let b = +prompt("Enter \"b\":", "");
 b = checkNumber(b);
-
-console.log(`Value a: ${a}, Value b: ${b}`);
+console.log(`Value \"a\": ${a}, Value \"b\": ${b}`);
 
 if (a < b) {
-	let h = +prompt("Enter Loop Step:", "");
+	let h = +prompt("Enter Loop Step \"h\":", "");
 
 	while (isNaN(h) || h <= 0 || h > b) {
-		h = +prompt("Att: Enter positive value more than ZERO , bigger than `a` and smaller than `b`:", "");
+		h = +prompt("Att: Enter positive \"value\" more than ZERO , bigger than \"a\" and smaller than \"b\":", "");
 	}
-	console.log(`Step h: ${h}`);
+	console.log(`Step \"h\": ${h}`);
 
 	let sum = 0;
 	for (let i = a; i <= b; i += h) {
 		console.log(`${i}!`, factorial(i));
 		sum += factorial(i);
 	}
-	console.log(`Total sum: ${sum}`);
+	console.log(`Total \"sum\": ${sum}`);
 } else {
-	console.log(`Wrong values:${b}>=${a}`);
+	console.log(`\"a\" >= \"b\" Wrong values : ${b} >= ${a}. You should enter \"a\" <= \"b\"`);
 }
 
