@@ -14,7 +14,7 @@ function factorial(n) {
 
 function checkNumber(n) {
 	while (isNaN(n) || n < 0) {
-		n = +prompt("Att: Enter \"value\" positive value include ZERO :", "");
+		n = +prompt("Att: Enter positive \"value\" include ZERO :", "");
 	}
 	return n;
 }
@@ -31,7 +31,7 @@ console.log(`Value \"a\": ${a}, Value \"b\": ${b}`);
 let h = +prompt("Enter Loop Step \"h\":", "");
 
 while (isNaN(h) || h <= 0 || h > b) {
-	h = +prompt("Att: Enter positive \"value\" more than ZERO , bigger than \"a\" and smaller than \"b\":", "");
+	h = +prompt("Att: Enter positive \"value\" more than ZERO , smaller than \"b\":", "");
 }
 console.log(`Step \"h\": ${h}`);
 
